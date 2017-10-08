@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+        <script type="text/javascript" src="ts/script.js">
+var Alert = (function () {
+    function Alert() {
+    }
+    Alert.prototype.showDialog = function () {
+        var message;
+        message = this.getMessage();
+        alert(message);
+    };
+    Alert.prototype.getMessage = function () {
+        return 'Hello World';
+    };
+    return Alert;
+}());
+function showAlert() {
+    var alertManager = new Alert();
+    alertManager.showDialog();
+}
+function showAlert() {
+    var alertManager = new Alert();
+    alertManager.showDialog();
+}
+</script>
+    </head>
+    <body>
+    <button onclick="showAlert()">Show Alert</button>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Text Value</legend>
+                Position: <input type="text" name="position" value="" />
+            </fieldset>
+            <fieldset>
+                <legend>Radio Value</legend>
+                <em>Department</em><br />
+                FIELD: <input type="radio" name="department" value="Field" checked="checked" /><br />
+                ITOPS: <input type="radio" name="department" value="IT Operations" /><br />
+                SALES: <input type="radio" name="department" value="Sales" /><br />
+                MGMT: <input type="radio" name="department" value="Management" />
+            </fieldset>
+            <button type="button" onclick="saveTextValue()">Save Text</button>
+            <button type="button" onclick="saveRadioValue()">Save Radio</button>
+        </form>
+        <script>
+            function saveToCookie(key, value, onCompletion) {
+    var cookieValue = key + ';' + value;
+    document.cookie += cookieValue;
+    onCompletion(cookieValue);
+}
+
+function saveTextValue() {
+    var textValue = document.getElementsByName('position')[0].value;
+    saveToCookie('Position', textValue, showTextSuccess);
+}
+
+function showTextSuccess (result) {
+    window.alert('You successfully saved [' + result + '] from the text input to your cookie.');
+}
+
+function saveRadioValue() {
+    var radioValue;
+    var radioOptions = document.getElementsByName('department');
+    for (var index = 0; index < radioOptions.length; index++) {
+        if (radioOptions[index].checked) {
+            radioValue = radioOptions[index].value;
+            break;
+        }
+    }
+    saveToCookie('Department', radioValue, function (result) {
+       window.alert('You did it! You saved [' + result + ']');
+    });
+}
+</script>
+    </body>
+</html>

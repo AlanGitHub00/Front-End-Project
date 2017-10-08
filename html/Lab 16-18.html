@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>HTML Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+p {
+font-style: italic;
+}
+article p {
+font-size: x-small;
+}
+article > p {
+color: red;
+}
+article > section > p {
+color: blue;
+}
+</style>
+<body>
+<header>Header</header>
+<article>
+    <p>Paragraph within article</p>
+    <section>
+        <p>First paragraph within article's section</p>
+        <p>Second paragraph within article's section</p>
+    </section>
+</article>
+<p>Paragraph outside article</p>
+<footer>Footer</footer>    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+        <script src="js/script.js">
+var socket = new WebSocket('ws://echo.websocket.org');
+socket.onopen = function () {
+    console.log('Our socket has been opened!');
+}
+socket.onmessage = function (event) {
+    window.alert(event.data);
+}
+function testMessage () {
+    socket.send("Hello World!");
+}
+</script>
+    </head>
+    <body>
+        <button type="button" onclick="testMessage()">Send Test Message</button>
+    </body>
+</html>

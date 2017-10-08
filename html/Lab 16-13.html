@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>HTML Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/figure.css" media="screen" />
+</head>
+<style>
+    figure {
+    border: 1px solid #990100;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: lr;
+    width: 500px;
+}
+figure > img {
+    flex-index: 1;
+    width: 200px;
+}
+figure > figcaption {
+    flex-index: 2;
+    width: 1fl;
+    padding: 16px;
+    color: #333333;
+    background-color: #E8E8E8;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+figcaption a,
+figcaption a:visited {
+    color: #B90504;
+}
+figcaption a:hover {
+    color: #990100;
+}
+    </style>
+<body>    
+<figure>
+    <img src="images/dotnet.png" alt=".NET Foundation">
+    <figcaption>
+        The .NET Foundation is an independent organization to foster open development and collaboration around the Microsoft .NET development framework.
+        <br />
+        <a href="http://www.dotnetfoundation.org/">http://www.dotnetfoundation.org/</a>
+    </figcaption>
+</figure>
+</body>
+</html>

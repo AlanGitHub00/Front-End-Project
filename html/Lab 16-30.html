@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js">
+    </script>
+<script type="text/javascript" src="js/script.js">
+$(document).ready(function () {
+});
+$(document).ready(function () {
+    manipulateDOM();
+});
+function manipulateDOM() {
+var h1Headers = $('h1');
+h1Headers.text('Hello World');
+var h3Headers = $('h3');
+h3Headers.css('color', '#37887D');
+h3Headers.first().css('text-decoration', 'line-through');
+var lastH3Header = $('h3:last');
+lastH3Header.css('background-color', '#53226A');   
+}
+</script>
+</head>
+<body>
+    <h1>H1 Header</h1>
+    <hr />
+    <h3>H3 Header</h3>
+    <hr />
+    <h3>Another H3 Header</h3>
+</body>
+</html>
+

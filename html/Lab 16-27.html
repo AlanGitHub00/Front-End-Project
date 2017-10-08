@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+    </head>
+    <body>
+<button onclick="handleClick()">Click Me</button>
+<button onclick="handleClick(doMore)">Click Me</button>  
+<button onclick="handleClick(doSomethingElse)">Click Me</button>    
+        <script type="text/javascript" src="js/script.js">       
+         function handleClick() {
+    alert('This button has been clicked');
+}
+function doMore() {
+    alert('I could process more logic here');
+}
+function handleClick(callback) {
+    alert('This button has been clicked');
+}
+function handleClick(callback) {
+    alert('This button has been clicked');
+    if (callback) {
+        callback();
+    }
+}
+function doSomethingElse() {
+    document.writeln('Test Message');
+}
+</script>
+    </body>
+</html>
